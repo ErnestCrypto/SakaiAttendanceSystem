@@ -104,4 +104,5 @@ def takeAttendance(request):
             return render(request, 'success.html', context)
     except:  
         return render(request, 'error.html', context)
+    return render(request, 'error.html', context)
     
