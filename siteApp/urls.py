@@ -1,0 +1,16 @@
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+app_name = "siteAppUrls"
+
+urlpatterns = [
+    path('', views.loginPage, name="loginPage"),
+    path('attendance', views.attendancePage, name="attendancePage"),
+    path('error', views.errorPage, name="errorPage"),
+    path('home', views.homePage, name="homePage"),
+    path('record', views.recordPage, name="recordPage"),
+    path('success', views.successPage, name="successPage"),
+    path('take_attendance', views.takeAttendance, name="takeAttendance"),
+    
+]

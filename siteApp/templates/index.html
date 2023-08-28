@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+    type='text/css' media='all' /><link rel="icon" href="assets/img/University_of_Ghana.png">
+  <link rel="icon" href="{% static 'assets/img/University_of_Ghana.png' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<title>Login Required - Sakai</title>
+<script src="{% static 'assets/js/main.js' %}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+</head>
+<body>
+
+<!-- start form -->
+<form action="{% url 'siteAppUrls:homePage' %}" method="POST" id="loginForm">
+    {% csrf_token %}
+<h1>login required</h1>
+<aside class="logo"></aside>
+<!-- start fieldset -->
+<fieldset>
+   <label for="id"> user id</label> 
+   <input title="id" type="text" name="username" size="15" required/>
+    <label for="password"> password</label>
+    <input title="password" type="password" name="password" size="15" required />
+<p class="buttons">
+<input type="submit" value="Log in">
+</p>
+
+<p class="buttons">
+    <a href="#">Forgot your password?</a>
+</p>
+
+</fieldset>
+<!-- end fieldset -->
+
+</form>
+<!-- end form -->
+
+</body>
+</html>
+
