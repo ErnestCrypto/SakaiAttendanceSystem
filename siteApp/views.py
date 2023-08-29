@@ -43,6 +43,10 @@ def attendancePage(request):
     context = {"student_id": student_id}
     return render(request, 'attendance.html', context)
 
+def attendance2Page(request):
+    student_id= request.session.get('student_id')
+    context = {"student_id": student_id}
+    return render(request, 'second.html', context)
 
 def recordPage(request):
     student_id= request.session.get('student_id')
@@ -117,3 +121,44 @@ def takeAttendance(request):
         return render(request, 'error.html', context)
     return render(request, 'error.html', context)
     
+    
+
+def takeAttendance2(request):
+    student_id= request.session.get('student_id')
+    student = Student.objects.get(student_id=student_id)
+    context = {"student_id": student_id}
+    try:
+        course = Location.objects.get(course="DCIT 202")
+        print(course)
+        course_longitude = course.longitude
+        course_latitude = course.latitude
+        course_location = float(course_longitude) + float(course_latitude)
+        margin_error_plus = course_location + 10
+        margin_error_minus = course_location - 10
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+            
+        
+        geolocation_json = get_ip_geolocation_data(ip)
+        
+        geolocation_data = json.loads(geolocation_json)
+        
+        longitude = geolocation_data['longitude']
+        latitude = geolocation_data['latitude'] 
+        student_location = longitude + latitude
+        print(longitude,latitude)
+        
+        if margin_error_minus < student_location and margin_error_plus > student_location: 
+            Attendance.objects.create(student=student)
+            student.classes_present =  int(student.classes_present) + 1
+            student.save()
+            print(student.classes_present)
+            return render(request, 'success.html', context)
+    except:  
+        return render(request, 'error.html', context)
+    return render(request, 'error.html', context)
+    
+
