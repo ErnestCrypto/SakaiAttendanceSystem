@@ -14,7 +14,7 @@ urlpatterns = [
     path('record', views.recordPage, name="recordPage"),
     path('success', views.successPage, name="successPage"),
     path('take_attendance', views.takeAttendance, name="takeAttendance"),
-    path('take_attendance2', views.takeAttendance2, name="takeAttendance"),
+    path('take_attendance2', views.takeAttendance2, name="takeAttendance2"),
     
     
 ]
