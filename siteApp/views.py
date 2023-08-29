@@ -66,10 +66,14 @@ def successPage(request):
 
 
 def get_ip_geolocation_data(ip_address):
-    api_key = 'f5717dc070fb45d1ae361a31e761badf'
-    api_url = 'https://ipgeolocation.abstractapi.com/v1/?api_key=f5717dc070fb45d1ae361a31e761badf' + api_key
-    response = requests.get("https://ipgeolocation.abstractapi.com/v1/?api_key=f5717dc070fb45d1ae361a31e761badf")
-    return response.content
+    # api_key = 'f5717dc070fb45d1ae361a31e761badf'
+    # api_url = 'https://ipgeolocation.abstractapi.com/v1/?api_key=f5717dc070fb45d1ae361a31e761badf' + api_key
+    # response = requests.get("https://ipgeolocation.abstractapi.com/v1/?api_key=f5717dc070fb45d1ae361a31e761badf")
+    url = "https://ipgeolocation.abstractapi.com/v1"
+    querystring = {"api_key":"f5717dc070fb45d1ae361a31e761badf","ip_address":"76.76.21.61"}
+    response = requests.request("GET", url, params=querystring)
+    print(response.text)
+    return response.text
 
 
 
@@ -81,6 +85,7 @@ def takeAttendance(request):
     context = {"student_id": student_id}
     try:
         course = Location.objects.get(course="DCIT 402")
+        print(course)
         course_longitude = course.longitude
         course_latitude = course.latitude
         course_location = float(course_longitude) + float(course_latitude)
@@ -91,11 +96,17 @@ def takeAttendance(request):
             ip = x_forwarded_for.split(',')[0]
         else:
             ip = request.META.get('REMOTE_ADDR')
+            
+        
         geolocation_json = get_ip_geolocation_data(ip)
+        
         geolocation_data = json.loads(geolocation_json)
+        
         longitude = geolocation_data['longitude']
         latitude = geolocation_data['latitude'] 
         student_location = longitude + latitude
+        print(longitude,latitude)
+        
         if margin_error_minus < student_location and margin_error_plus > student_location: 
             Attendance.objects.create(student=student)
             student.classes_present =  int(student.classes_present) + 1
