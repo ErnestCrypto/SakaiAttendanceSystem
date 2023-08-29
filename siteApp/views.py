@@ -158,7 +158,7 @@ def takeAttendance2(request):
             print(student.classes_present)
             return render(request, 'success.html', context)
     except:  
-        return render(request, 'error.html', context)
-    return render(request, 'error.html', context)
+        return render(request, 'error2.html', context)
+    return render(request, 'error2.html', context)
     
 

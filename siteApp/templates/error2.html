@@ -1,0 +1,896 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+        type='text/css' media='all' />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="icon" href="{% static 'assets/img/University_of_Ghana.png' %}">
+
+
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<title>Sakai : DCIT 403 1 S1-2223 : Overview</title>
+<script src="{% static 'assets/js/main.js' %}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="referrer" content="strict-origin" />
+</head>
+<div>
+
+    <!-- start topheader -->
+    <div class="topheader">
+
+        <!-- start header -->
+        <header class="headerlogo">
+            <span class="headerlogoinstitution"></span>
+            <!-- start nav -->
+            <nav>
+                <!-- start bell-buttons -->
+                <div class="bell-buttons">
+                    <a href="#">
+                        <span class="bellcion">
+                        </span>
+                        <span class="counter">735</span>
+                    </a>
+                </div>
+                <!-- end bell-buttons -->
+                <!-- start grid -->
+                <div class="grid">
+                    <a href="#"><i class="fa fa-th" aria-hidden="true" class="gridicon" style="font-size:16pt"></i>
+                        <span class="sites">Sites</span>
+                    </a>
+                </div>
+                <!-- end grid -->
+                <!-- start login-links -->
+                <ul class="login-links">
+                    <!--start login-item -->
+                    <li class="login-item">
+                        <a href="#">show system alerts</a>
+                    </li>
+                    <!-- end login-item-popup -->
+                    <li class="login-item-popup">
+                        <!-- start loginuser -->
+                        <div class="loginuser">
+                            <!-- start profileUser -->
+                            <a href="#" class="profileUser">
+                                <!-- start backgroundprofile -->
+                                <span class="backgroundprofile">
+                                </span>
+                                <!-- end backgroundprofile -->
+                                <span class="textlink">ernest akoto</span>
+                            </a>
+                            <!-- end profileUser -->
+                        </div>
+                        <!-- end loginuser -->
+                        <!-- start usernav -->
+                        <ul class="usernav">
+                            <!-- start subusernav -->
+                            <li class="subusernav">
+                                <!-- start subusernav-profile -->
+                                <div class="subusernav-profile">
+                                    <!-- start has-avater -->
+                                    <div class="has-avater">
+                                        <a href="#">
+                                            <span></span>
+                                            <span>change profile picture</span>
+                                        </a>
+                                    </div>
+                                    <!-- end has-avater -->
+
+                                    <!-- start submenuitem-prifile -->
+                                    <div class="submenuitem-prifile">
+                                        <a href="#">
+                                            <span>profile</span>
+                                        </a>
+                                    </div>
+                                    <!-- end submenuitem-prifile -->
+                                </div>
+                                <!-- end subusernav-profile -->
+
+                                <!-- start userNav-fullname -->
+                                <div class="userNav-fullname">
+                                    <!-- start userNav-fullname-1 -->
+                                    <div class="userNav-fullname-1">
+                                        ernest akoto bamfo
+                                    </div>
+                                    <!-- end userNav-fullname-2 -->
+                                    <div class="userNav-fullname-2">
+{{student_id}}
+                                    </div>
+                                    <!-- end userNav-fullname-2 -->
+                                </div>
+                                <!-- end userNav-fullname -->
+                            </li>
+                            <!-- end subusernav -->
+
+
+                            <!-- start subusernav-2 -->
+                            <li class="subusernav-2">
+                                <a href="#">
+                                    <span>my connections</span>
+                                </a>
+                            </li>
+                            <!-- end subusernav-2 -->
+                            <!-- start subusernav-2 -->
+                            <li class="subusernav-2">
+                                <a href="#">
+                                    <span>calender</span>
+                                </a>
+                            </li>
+                            <!-- end subusernav-2 -->
+                            <!-- start subusernav-2 -->
+                            <li class="subusernav-2">
+                                <a href="#">
+                                    <span>preferences</span>
+                                </a>
+                            </li>
+                            <!-- end subusernav-2 -->
+                            <!-- start subusernav-2 -->
+                            <li class="subusernav-2">
+                                <a href="#">
+                                    <span>tutorial</span>
+                                </a>
+                            </li>
+                            <!-- end subusernav-2 -->
+                            <!-- start subusernav-2 -->
+                            <li class="subusernav-2">
+                                <a href="{% url 'siteAppUrls:loginPage' %}">
+                                    <span>log out</span>
+                                </a>
+                            </li>
+                            <!-- end subusernav-2 -->
+                        </ul>
+                        <!-- end usernav -->
+                    </li>
+                    <!-- end login-item-popup -->
+                </ul>
+                <!-- end login-links -->
+            </nav>
+            <!-- end nav -->
+        </header>
+        <!-- start header -->
+    </div>
+    <!-- start topheader -->
+
+    <!-- start includeTabs -->
+    <div class="includeTabs">
+        <nav>
+            <h2 class="skip">Sites list begins here</h2>
+            <!-- start showallsites -->
+            <div id="showallsites">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                <span>All Sites</span>
+            </div>
+            <!-- end showallsites -->
+
+            <!-- start topcontainers -->
+            <div class="topcontainers">
+                <!-- start ul -->
+                <ul>
+                    <!-- start li-workspace -->
+                    <li class="workspace">
+                        <!-- start link-container -->
+                        <a href="" class="link-container">
+                            <span class="fa fa-home" aria-hidden="true"></span>
+
+                            <span>home</span>
+                        </a>
+                        <!-- end link-container -->
+                        <!-- start link-container-dropdown -->
+                        <a href="" class="link-container-dropdown"></a>
+                        <!-- end link-container-dropdown -->
+                    </li>
+                    <!-- start li-workspace -->
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem">
+                        <a href="#" class="menuitem-icon"></a>
+                        <a href="" class="link-container">
+                            <span>DCIT 212 1 S2-2021</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem">
+                        <a href="#" class="menuitem-icon"></a>
+                        <a href="" class="link-container">
+                            <span>DCIT 208 1 S2-2021</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem">
+                        <a href="#" class="menuitem-icon"></a>
+                        <a href="" class="link-container">
+                            <span>UGRC 228 1 S2-2021</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem">
+                        <a href="#" class="menuitem-icon"></a>
+                        <a href="" class="link-container">
+                            <span>DCIT 206 1 S2-2021</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem">
+                        <a href="#" class="menuitem-icon"></a>
+                        <a href="" class="link-container">
+                            <span>DCIT 204 1 S2-2021</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem-2">
+                        <a href="#" class="menuitem-icon"></a>
+                        <a href="" class="link-container">
+                            <span>DCIT 202 1 S2-2021</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+
+                    <!-- start li-menuitem -->
+                    <li class="menuitem">
+                        <a href="#" class="menuitem-icon">
+
+
+                        </a>
+                        <a href="" class="link-container">
+                            <span>DCIT 403 1 S1-2223</span>
+                        </a>
+                        <a href="#" class="menuitem-icon-2"></a>
+                    </li>
+                    <!-- end li-menuitem -->
+                </ul>
+                <!-- end ul -->
+            </div>
+            <!-- end topcontainers -->
+        </nav>
+    </div>
+    <!-- end includeTabs -->
+
+
+
+
+    <!-- start pagebody -->
+    <div class="pagebody">
+        <!-- start toolMenu -->
+        <div class="toolMenu">
+
+            <h2 class="skip">Tools list begins here</h2>
+            <!-- start toolMenuitemsContainer -->
+            <div class="toolMenuitemsContainer">
+                <!-- nav -->
+                <nav>
+                    <!-- ul -->
+                    <ul>
+                        <!-- start li -->
+                        <li>
+                            <a href="{% url 'siteAppUrls:homePage' %}" >
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-list-ul" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    overview
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-map-o" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    syllabus
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-file-text" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    lessons
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    calender
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    announcements
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="{% url 'siteAppUrls:attendancePage' %}" class="is-current">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    attendance
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-folder-open" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    resurces
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-comments" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    discussions
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-file-text" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    assignments
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    test & quizzes
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    gradebook
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-exchange" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    drop box
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    chat room
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    email archive
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    site info
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-inbox" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    messages
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    polls
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-university" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    commons
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    email
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+                        <!-- start li -->
+                        <li>
+                            <a href="#">
+                                <!-- start toolMenuitemsContainer-icon -->
+                                <div class="toolMenuitemsContainer-icon ">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+
+                                </div>
+                                <!-- end toolMenuitemsContainer-icon -->
+                                <!-- start toolMenuitemsContainer-title -->
+                                <div class="toolMenuitemsContainer-title">
+                                    help
+                                </div>
+                                <!-- end toolMenuitemsContainer-title -->
+                                <!-- start toolMenuitemsContainer-block -->
+                                <div class="toolMenuitemsContainer-block">
+                                </div>
+                                <!-- end toolMenuitemsContainer-block -->
+                            </a>
+                        </li>
+                        <!-- end li -->
+
+
+
+                        <!-- start li-togglefixed -->
+                        <li class="togglefixed">
+                            <button>
+                                <span class="fa fa-lg fa-angle-double-left" aria-hidden="true"></span>
+                                <span class="sr-only">Expand/collapse tool navigation</span>
+
+                            </button>
+                        </li>
+                        <!-- end li-togglefixed -->
+
+
+                    </ul>
+                    <!-- ul -->
+                </nav>
+                <!-- nav -->
+            </div>
+            <!-- end toolMenuitemsContainer -->
+        </div>
+        <!-- end toolMenu -->
+
+
+        <!-- start pagebody-left -->
+        <div class="pagebody-left">
+            <!-- start nav-site -->
+            <nav class="nav-site"
+                style="flex-direction:row;justify-content: space-between !important; align-items: center">
+                <!-- start sites -->
+                <div class="sites-2">
+                    <!-- start sitename -->
+                    <span class="sitename">
+                        <a href="#">
+                            <span class="siteName-label">
+                                DCIT 403 1 S1-2223
+                            </span>
+                        </a>
+                    </span>
+                    <!-- end sitename -->
+                    <!-- start sitenameseperator -->
+                    <span class="sitenameseperator">
+                        <i class="fa fa-lg fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                    <!-- end sitenameseperator -->
+                </div>
+                <!-- end sites -->
+
+                <!-- start toolnametoolnmae -->
+                <a href="#" class="toolname">
+                    <span class="reseticon"></span>
+                    <span class="toolnameicon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </span>
+                    <span class="toolNameText">Attendance</span>
+                </a>
+                <!-- end toolnametoolnmae -->
+
+                <!-- start toolheaderbuttons -->
+                <div class="toolheaderbuttons">
+                    <span class="addRight"></span>
+                    <button class="toolheaderbuttons-1">
+                        <i class="fa fa-link"></i>
+                        <span class="itemTitle">Link</span>
+                    </button>
+                    <!-- first -->
+                    <a href="#" class="toolheaderbuttons-1">
+                        <i class="fa fa-question" aria-hidden="true"></i>
+                        <span class="itemTitle">Help</span>
+                        <span class="skip">Opens in a new window</span>
+                    </a>
+                    <!-- second -->
+                    <a href="#" class="toolheaderbuttons-1">
+                        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                        <span class="itemTitle">Link</span>
+                    </a>
+                    <!-- third -->
+                </div>
+                <!-- end toolheaderbuttons -->
+
+
+            </nav>
+            <!-- end nav-site -->
+
+
+
+
+
+
+
+
+
+            <!-- start maincontent -->
+            <main class="maincontent">
+
+                <!-- start maincontentbody -->
+                <div class="maincontentbody">
+
+                    <!-- start maincontentbody-header -->
+                    <div class="maincontentbody-header">
+
+                        <!-- start maincontentbody-header1 -->
+                        <a href="{% url 'siteAppUrls:attendancePage' %}">
+                            <div class=" col-sm-2 maincontentbody-header1 active">
+                                <p>Take Attendance</p>
+                            </div>
+                        </a>
+                        <!-- end maincontentbody-header1 -->
+
+                        <!-- start maincontentbody-header2 -->
+                        <a href="{% url 'siteAppUrls:recordPage' %}">
+                            <div class=" col-sm-2 maincontentbody-header2 ">
+                                <p>Attendance Status</p>
+                            </div>
+                        </a>
+                        <!-- end maincontentbody-header2 -->
+                    </div>
+                    <!-- end maincontentbody-header -->
+
+
+                    <!-- start  maincontentbody-body -->
+                    <div class="maincontentbody-body">
+                        <h3>Please make sure your GPS location is enabled on your device to take your attendance</h3>
+
+
+                        <!-- start success -->
+                        <div class="success">
+                        <img src="{% static 'assets/img/uil_user-exclamation.png' %}" class="success" alt="location_img">
+                    <h3>Your Location Isn’t At The Place Of The Class </h3>    
+                    
+                    </div>
+                        <!-- end success -->
+                        
+
+                    </div>
+                    <!-- end  maincontentbody-body -->
+
+                </div>
+                <!-- end maincontentbody -->
+
+
+            </main>
+            <!-- end maincontent -->
+
+
+
+
+
+
+        </div>
+        <!-- end pagebody-left -->
+    </div>
+    <!-- end pagebody -->
+    </body>
+
+</html>
